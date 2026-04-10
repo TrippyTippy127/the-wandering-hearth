@@ -21,7 +21,7 @@ const gameState = {
 function updateUI() {
     document.getElementById('wood-count').textContent = gameState.resources.wood;
     document.getElementById('stone-count').textContent = gameState.resources.stone;
-    document.getElementById('herbs-count').textContent = gameState.resources.herbs;
+    document.getElementById('herb-count').textContent = gameState.resources.herbs;
     document.getElementById('dust-count').textContent = gameState.resources.magicDust;
     document.getElementById('population-display').textContent
         = `Population: ${gameState.population}`;
@@ -62,7 +62,7 @@ function buildHexGrid() { // This function creates the hex grid based on the ini
     });
 
     // Build each row
-    Objects.keys(rows).forEach(rowIndex => {
+    Object.keys(rows).forEach(rowIndex => {
         const rowDiv = document.createElement('div');
         rowDiv.classList.add('hex-row-offset');
         
