@@ -75,7 +75,7 @@ function buildHexGrid() { // This function creates the hex grid based on the ini
             const hex = document.createElement('div'); 
             hex.classList.add('hex');
             hex.id = hexData.id;
-
+            // Set the initial appearance based on the hex's state
             if (hexData.state === 'fog') { // Fogged hexes show a question mark and are styled differently
                 hex.classList.add('hex-fog');
                 hex.textContent = '?';
@@ -95,3 +95,40 @@ function buildHexGrid() { // This function creates the hex grid based on the ini
         map.appendChild(rowDiv);
     });
 }
+
+//=====================================
+// HEX CLICK HANDLER - what happens when you click a hex
+//=====================================
+
+let selectedHexId = null; // Track which hex is currently selected
+
+function handleHexClick(hexId, hexState) {
+    if (hexState === 'fog') {
+        alert("This are is shrouded in fog! Expand your town to reveal it.");
+        return; // Stop here. Do nothing if it's fogged.
+    }
+
+    // Remove "selected" class from previously selected hex
+    document.querySelectorAll('hex').forEach(h => h.classList.remove('hex-selected'));
+
+    // Highlight the newly clicked hex
+    document.getElementById(hexId).classList.add('hex-selected');
+
+    // Remember which hex is selected
+    selectedHexId = hexId;
+
+    // Show the build menu
+    document.getElementById('build-menu').classList.remove('hidden');
+}
+
+//=====================================
+// INITIALIZATION - set up the game when the page loads
+//=====================================
+
+function init() {
+    buildHexGrid(); // Create the hex grid on the page
+    updateUI(); // Update the resource and population displays
+    console.log("Emberwick is ready!");
+}
+
+init(); // Start the game when the page loads
