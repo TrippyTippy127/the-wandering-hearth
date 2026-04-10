@@ -59,3 +59,29 @@ body {
     border: 1px solid var(--border-color);
 }
 
+/* =============================================================================
+  RESOURCE BAR
+============================================================================= */
+
+#resource-bar {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 12px 24px;
+    background-color: var(--bg-medium);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.resource {
+    background: var(--bg-light);
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    font-size: 15px;
+    color: var(--text-light);
+}
+
+.resource strong {
+    color: var(--accent-gold);
+}
+
