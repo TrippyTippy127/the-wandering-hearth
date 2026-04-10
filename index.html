@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- This is the main HTML file for the Wandering Hearth website. It includes a link to the CSS stylesheet and a script tag for the JavaScript file. -->
+    
+    <head> <!-- The head section contains metadata about the document, including the character encoding, viewport settings, title, and links to external resources. -->
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Wandering Hearth</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body> <!-- The body section contains the content of the webpage, including a heading and a script tag for the JavaScript file. -->
+        
+        <!-- HEADER BAR -->
+        <header id="game-header">
+            <h1>Emberwick</h1>
+            <p id="population-display">Population: 0</p>
+        </header>
+
+        <!-- RESOURCE BAR -->
+        <div id="resource-bar">
+            <span class="resource">Wood: <strong id="wood-count">0</strong></span>
+            <span class="resource">Stone: <strong id="stone-count">0</strong></span>
+            <span class="resource">Herbs: <strong id="herb-count">0</strong></span>
+            <span class="resource">Magic Dust: <strong id="dust-count">0</strong></span>
+        </div>
+
+        <!-- HEX MAP -->
+        <main id="hex-map">
+            <p>[MAP GOES HERE]</p>
+        </main>
+
+        <!-- BUILDING MENU (hidden until you click a hex) -->
+        <div id="build-menu" class="hidden">
+            <h2>Choose a Building</h2>
+            <p>Click a hex first!</p>
+        </div>
+
+        <!-- ACHIEVEMENTS -->
+        <div id="achievement-popup" class="hidden">
+            Achievement Unlocked!
+        </div>
+    
+        <!-- SCRIPT -->
+        <script src="script.js"></script>
+    </body>
+
+</html>
