@@ -1,0 +1,61 @@
+/* =============================================================================
+  Color Variables
+============================================================================= */
+:root {
+    --bg-dark: #1a1a2e;
+    --bg-medium: #16213e;
+    --bg-light: #0f3460;
+    --accent-gold: #e8b84b;
+    --accent-green: #4caf7d;
+    --accent-red: #e05c5c;
+    --text-light: #f0e6d3;
+    --text-muted: #9a8fa0;
+    --border-color: #3a3a5c;
+}
+
+/* =============================================================================
+  RESET & BASE
+============================================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: 'Crimson Text', serif;
+    font-size: 18px;
+    min-height: 100vh;
+}
+
+/* =============================================================================
+  HEADER
+============================================================================= */
+
+#game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background-color: var(--bg-medium);
+    border-bottom: 2px solid var(--acccent-gold);
+}
+
+#game-header h1 {
+    font-family: 'MedievalSharp', cursive;
+    font-size: 28px;
+    color: var(--accent-gold);
+    text-shadow: 0 0 12px rgba(232, 184, 75, 0.4);
+}
+
+#population-display {
+    font-size: 16px;
+    color: var(--text-muted);
+    background: (var--bg-light);
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+}
+
